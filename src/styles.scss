@@ -1,0 +1,50 @@
+@import "bootstrap/scss/bootstrap";
+@import "./variables.scss";
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  background-color: $bg;
+  color: $light;
+  padding: 0 5dvw;
+  min-height: 100dvh;
+}
+
+nav {
+  background: $bg;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  margin-bottom: 2dvh;
+  color: $light;
+
+  .anchors {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    font-weight: 400;
+
+    a {
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    .active {
+      color: $light;
+    }
+  }
+
+  button {
+    border: none;
+    border-radius: 100em;
+    padding: 2px 15px;
+    background-color: $accent;
+    color: $light;
+    font-weight: 400;
+  }
+}
