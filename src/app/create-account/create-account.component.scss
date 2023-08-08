@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.custom-input {
+  background-color: #fff1;
+  border-radius: 0px;
+  padding: 20px;
+  padding-bottom: 5px;
+
+  label {
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
+  :is(input, select) {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    border-radius: 0px;
+  }
+}
