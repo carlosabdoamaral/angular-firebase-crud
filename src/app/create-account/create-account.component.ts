@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AccountModel } from '../utils/models';
-import axios from 'axios';
+import { accountListMock } from '../utils/mock';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-create-account',
@@ -8,9 +9,18 @@ import axios from 'axios';
   styleUrls: ['./create-account.component.scss']
 })
 export class CreateAccountComponent {
+  constructor(private _toastService: ToastService) { }
+
   countryOptions: string[] = [
     'BR', 'USA', 'ARG', 'FR', 'OTHER'
   ]
+
+  accountInitialState: AccountModel = {
+    name: "",
+    email: "",
+    birthdate: new Date(),
+    country: this.countryOptions[0],
+  }
 
   account: AccountModel = {
     name: "",
@@ -26,7 +36,8 @@ export class CreateAccountComponent {
 
   async submit(e: any) {
     e.preventDefault()
-
-    // firebase call
+    accountListMock.push(this.account)
+    this._toastService.success('Conta criada com sucesso!')
+    this.account = this.accountInitialState
   }
 }

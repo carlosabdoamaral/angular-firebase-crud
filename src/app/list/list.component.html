@@ -19,10 +19,7 @@
       <td>{{ getFormattedBirthdate(account.birthdate) }}</td>
       <td>{{ account.country }}</td>
       <td class="table-actions">
-        <button type="button" class="btn btn-dark">
-          <span class="material-symbols-rounded"> border_color </span>
-        </button>
-        <button type="button" class="btn btn-danger">
+        <button type="button" class="btn btn-danger" (click)="deleteById(i)">
           <span class="material-symbols-rounded"> delete </span>
         </button>
       </td>

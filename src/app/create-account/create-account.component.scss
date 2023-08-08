@@ -1,28 +1,38 @@
 @import "../../variables.scss";
 
-.custom-input {
-  background-color: #fff1;
-  border-radius: 0px;
-  padding: 20px;
-  padding-bottom: 5px;
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
 
-  label {
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
-
-  :is(input, select) {
-    border: none;
-    outline: none;
-    border-radius: 0;
-    background: none;
-    padding: 0;
-    margin: 0;
-    height: 40px;
+  .custom-input {
+    background-color: #fff1;
     border-radius: 0px;
-  }
-}
+    padding: 20px;
+    padding-bottom: 5px;
+    width: 49.5%;
 
-button {
-  border-radius: 0;
+    label {
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+
+    :is(input, select) {
+      border: none;
+      outline: none;
+      border-radius: 0;
+      background: none;
+      padding: 0;
+      margin: 0;
+      height: 40px;
+      border-radius: 0px;
+    }
+  }
+
+  button {
+    width: 100%;
+    border-radius: 0;
+  }
 }
