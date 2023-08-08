@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+table {
+  :not(caption) {
+    * > :not(button, span) {
+      background-color: $bg;
+    }
+  }
+
+  tbody {
+    tr {
+      * {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  thead > tr > th {
+    font-weight: 300;
+  }
+}
+
+.table-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
